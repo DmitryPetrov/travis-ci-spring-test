@@ -6,3 +6,6 @@ script: ./mvnw clean install
 
 notification:
   email: dmitrypetrov93@gmail.com
+
+before_install:
+  - chmod +x mvnw
