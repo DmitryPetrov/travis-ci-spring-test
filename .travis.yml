@@ -4,6 +4,10 @@ jdk: openjdk8
 notification:
   email: dmitrypetrov93@gmail.com
 
+cache:
+  directories:
+    - $HOME/.m2
+
 jobs:
   include:
     - stage: 'check style'
