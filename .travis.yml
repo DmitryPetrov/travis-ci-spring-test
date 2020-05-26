@@ -1,12 +1,24 @@
 language: java
-jdk:
-  - openjdk8
+jdk: openjdk8
 
-script: ./mvnw install
+before_install: chmod +x mvnw
+install: skip
+after_install: skip
+
+before_script: skip
+script:
+  - ./mvnw checkstyle:check
+  - ./mvnw install
+after_success: skip
+after_failure: skip
+
+before_deploy: skip
+deploy: skip
+after_deploy: skip
+
+after_script: skip
 
 notification:
   email: dmitrypetrov93@gmail.com
 
-before_install:
-  - chmod +x mvnw
-  - ./mvnw checkstyle:check
+
