@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 
+    //commit for master branch
+
     @GetMapping("/")
     @ResponseBody
     public String welcome() {
