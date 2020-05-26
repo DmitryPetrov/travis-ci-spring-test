@@ -7,16 +7,19 @@ notification:
 jobs:
   include:
     - stage: 'check style'
-      before_script: chmod +x mvnw
-      script: ./mvnw checkstyle:check
+      script:
+        - chmod +x mvnw
+        - ./mvnw checkstyle:check
 
     - stage: 'test'
-      before_script: chmod +x mvnw
-      script: ./mvnw test
+      script:
+        - chmod +x mvnw
+        - ./mvnw test
 
     - stage: 'package'
-      before_script: chmod +x mvnw
-      script: ./mvnw package
+      script:
+        - chmod +x mvnw
+        - ./mvnw package
 
     - stage: 'deploy'
       script: echo "deploy"
