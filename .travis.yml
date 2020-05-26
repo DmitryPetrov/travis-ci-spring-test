@@ -22,6 +22,12 @@ jobs:
       before_install: chmod +x mvnw
       script: ./mvnw package
 
-    - stage: 'deploy'
+    - stage: 'deploy prod'
+      if: branch = master
       before_install: chmod +x mvnw
-      script: echo "deploy"
+      script: echo "deploy prod"
+
+    - stage: 'deploy dev'
+      if: branch = dev
+      before_install: chmod +x mvnw
+      script: echo "deploy dev"
