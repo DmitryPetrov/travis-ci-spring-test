@@ -6,16 +6,16 @@ notification:
 
 jobs:
   include:
-    - stage: 'setup'
-      script: chmod +x mvnw
-
     - stage: 'check style'
+      before_script: chmod +x mvnw
       script: ./mvnw checkstyle:check
 
     - stage: 'test'
+      before_script: chmod +x mvnw
       script: ./mvnw test
 
     - stage: 'package'
+      before_script: chmod +x mvnw
       script: ./mvnw package
 
     - stage: 'deploy'
