@@ -9,3 +9,4 @@ notification:
 
 before_install:
   - chmod +x mvnw
+  - ./mvnw checkstyle:check
