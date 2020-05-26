@@ -29,12 +29,4 @@ class ControllerTest {
                 .andExpect(content().string(containsString("Hello")));
     }
 
-    @Test
-    public void failTest() throws Exception {
-        this.mockMvc.perform(get("/"))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(content().string(containsString("fail test")));
-    }
-
 }
