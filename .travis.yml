@@ -19,4 +19,5 @@ jobs:
       script: ./mvnw package
 
     - stage: 'deploy'
+      before_install: chmod +x mvnw
       script: echo "deploy"
