@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<checkstyle.config.location>${basedir}/sun_checks.xml</checkstyle.config.location>
+		<checkstyle.config.location>${basedir}/custom_checks.xml</checkstyle.config.location>
 	</properties>
 
 	<dependencies>
